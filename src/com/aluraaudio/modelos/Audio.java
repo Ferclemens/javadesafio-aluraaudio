@@ -1,3 +1,5 @@
+package com.aluraaudio.modelos;
+
 public class Audio {
     private String titulo;
     private int totalDeReproducciones;
