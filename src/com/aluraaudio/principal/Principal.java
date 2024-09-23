@@ -1,6 +1,7 @@
 package com.aluraaudio.principal;
 
 import com.aluraaudio.modelos.Cancion;
+import com.aluraaudio.modelos.MisFavoritos;
 import com.aluraaudio.modelos.Podcast;
 
 public class Principal {
@@ -20,7 +21,18 @@ public class Principal {
             miCancion.reproduce();
         }
 
+        for (int i = 0; i < 200; i++) {
+            miPodcast.meGusta();
+        }
+        for (int i = 0; i < 4000; i++) {
+            miPodcast.reproduce();
+        }
+
         System.out.println("Total de reproducciones " + miCancion.getTotalDeReproducciones());
         System.out.println("Total de me gusta " + miCancion.getTotalDeMeGusta());
+
+        MisFavoritos misFavoritos = new MisFavoritos();
+        misFavoritos.adiciones(miPodcast);
+        misFavoritos.adiciones(miCancion);
     }
 }
